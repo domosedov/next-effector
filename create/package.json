@@ -1,0 +1,4 @@
+{
+  "main": "dist/effector-next-create.cjs.js",
+  "module": "dist/effector-next-create.esm.js"
+}
