@@ -1,5 +1,8 @@
 import { createStore } from 'effector';
 
-const $text = createStore("Hello, world!");
+var $text = createStore("Hello, world!", {
+  name: "$text",
+  sid: "753rvc"
+});
 
 export { $text };

@@ -4,10 +4,17 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 var effector = require('effector');
 
-const $count = effector.createStore(0);
-const increment = effector.createEvent();
-
-$count.on(increment, (currentCount) => currentCount + 1);
+var $count = effector.createStore(0, {
+  name: "$count",
+  sid: "-543v3"
+});
+var increment = effector.createEvent({
+  name: "increment",
+  sid: "rujckx"
+});
+$count.on(increment, function (currentCount) {
+  return currentCount + 1;
+});
 
 exports.$count = $count;
 exports.increment = increment;

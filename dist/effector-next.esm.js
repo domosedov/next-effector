@@ -1,8 +1,15 @@
 import { createStore, createEvent } from 'effector';
 
-const $count = createStore(0);
-const increment = createEvent();
-
-$count.on(increment, (currentCount) => currentCount + 1);
+var $count = createStore(0, {
+  name: "$count",
+  sid: "-543v3"
+});
+var increment = createEvent({
+  name: "increment",
+  sid: "rujckx"
+});
+$count.on(increment, function (currentCount) {
+  return currentCount + 1;
+});
 
 export { $count, increment };
